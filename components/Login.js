@@ -10,13 +10,21 @@ const Login = {
   },
   setup(props) {
     const data = Vue.reactive({
-      id: "1"
+      message: ""
+    })
+    Vue.computed(() => {
+      if(props.password == ""){
+        data.message = "Welcome to the This Page"
+      }else {
+        data.message = "Sorry! get out!"
+      }
     })
     return {
       data
     }
   },
   template: `
-    <div>{{proos.userName}}さん、こんにちは!</div>
+    <div>{{props.userName}}さん、こんにちは!</div>
+    <p class="bg-danger text-center">{{data.message}}</p>
   `
 }
