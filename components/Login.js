@@ -25,7 +25,7 @@ const Login = {
     }
   },
   template: `
-    <div>{{props.userName}}さん、こんにちは!</div>
+    <div>{{userName}}さん、こんにちは!</div>
     <p class="bg-danger text-center">{{data.message}}</p>
   `
 }
