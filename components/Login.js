@@ -1,4 +1,5 @@
 const Login = {
+  name: "login",
   props: {
     userName: {
       type: String,

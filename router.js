@@ -1,13 +1,13 @@
 const router = VueRouter.createRouter({
   history: VueRouter.createWebHistory(),
-  routes: [
-    {
+  routes: [{
       path: '/',
       component: Home,
     },
     {
-      path: '/login',
+      path: '/login/:userName',
       component: Login,
+      props: true
     }
   ]
 })
