@@ -10,7 +10,8 @@ const Login = {
   },
   setup(props) {
     const data = Vue.reactive({
-      message: ""
+      message: "",
+      name: props.userName
     })
     Vue.computed(() => {
       if(props.password == ""){
@@ -24,7 +25,9 @@ const Login = {
     }
   },
   template: `
-    <div>{{userName}}さん、こんにちは!</div>
-    <p class="bg-danger text-center">{{data.message}}</p>
+    <div>
+      {{data.name}}さん、こんにちは!
+      <p class="bg-danger text-center">{{data.message}}</p>
+    </div>
   `
 }
